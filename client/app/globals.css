@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background-primary: oklch(13.39% 0.028 2.94);
+  --text-primary: oklch(97.26% 0.024 83.42);
+  --accent-red: oklch(40.80% 0.156 22.53);
+  --accent-red-dark: oklch(26.83% 0.095 21.29);
+}
+
+@theme inline {
+  --color-background-primary: var(--background-primary);
+  --color-text-primary: var(--text-primary);
+  --color-accent-red: var(--accent-red);
+  --color-accent-red-dark: var(--accent-red-dark);
+  --font-limelight: var(--font-limelight);
+  --font-eb-garamond: var(--font-eb-garamond);
+}
+
+body {
+  background: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-eb-garamond);
+}
