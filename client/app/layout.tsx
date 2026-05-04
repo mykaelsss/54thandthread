@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Limelight, EB_Garamond } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const limelight = Limelight({
   weight: '400',
@@ -34,6 +35,7 @@ export default function RootLayout({
         </a>
         {children}
       </body>
+      <SpeedInsights />
     </html>
   );
 }
