@@ -43,16 +43,16 @@ export default function Hero() {
                             muted
                             loop
                             aria-hidden="true"
-                            poster="/logo-poster.webp"
+                            poster="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/logo/logo-poster.webp"
                             className="relative w-[clamp(2rem,60vw,60rem)] md:w-[clamp(2rem,28vw,28rem)] mx-auto -z-10"
                         >
-                            <source src="/logo.webm" type="video/webm" />
-                            <source src="/logo.mov" type="video/quicktime" />
+                            <source src="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/logo/logo.mov" type="video/quicktime" />
+                            <source src="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/logo/logo.webm" type="video/webm" />
                         </video>
                     ) : (
                         <Image
-                            src="/logo-poster.webp"
-                            alt=""
+                            src="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/logo/logo-poster.webp"
+                            alt="logo design"
                             aria-hidden="true"
                             width={800}
                             height={800}
@@ -68,14 +68,14 @@ export default function Hero() {
             {/* Decorative background images — same container so flower centers on design */}
             <div className="absolute top-22 inset-x-0 bottom-0 z-1" aria-hidden="true">
                 <Image
-                    src="/design.webp"
-                    alt=""
+                    src="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/design.webp"
+                    alt="design image"
                     fill
                     className="opacity-45 object-contain object-top"
                 />
                 <Image
-                    src="/flower.webp"
-                    alt=""
+                    src="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/flower.webp"
+                    alt="flower image"
                     fill
                     className="opacity-25 object-contain object-top"
                 />

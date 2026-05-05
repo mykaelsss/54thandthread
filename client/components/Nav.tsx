@@ -25,7 +25,7 @@ export default function Nav() {
         <div className="xl:flex-1 -translate-y-3">
           <Link href="/" aria-label="54th and Thread — home">
             <Image
-              src="/disco_ball_still.webp"
+              src="https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/logo/disco_ball_still.webp"
               alt="54th and Thread logo"
               width={40}
               height={40}

@@ -26,6 +26,7 @@ export default function CollectionCard({
                 src={img}
                 alt={title}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 loading="lazy"
                 className="object-cover"
                 />

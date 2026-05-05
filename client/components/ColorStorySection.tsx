@@ -1,11 +1,10 @@
 import Marquee from "react-fast-marquee";
-import fs from 'fs'
-import path from 'path'
 import Image from "next/image";
+import { list } from '@vercel/blob';
 
-const coloredDiscoBalls = fs.readdirSync(path.join(process.cwd(), 'public/color_story_disco_balls'))
+export default async function ColorStorySection() {
+    const { blobs } = await list({ prefix: 'color_story_disco_balls/' });
 
-export default function ColorStorySection() {
     return (
         <section className="flex flex-col py-17.5 items-center gap-7.5 overflow-hidden">
             <div className="flex flex-col gap-4 text-center">
@@ -14,14 +13,14 @@ export default function ColorStorySection() {
             </div>
             <div className="px-2 lg:w-3/4 overflow-clip">
                 <Marquee pauseOnHover>
-                    {coloredDiscoBalls.map((d, idx) => (
+                    {blobs.map((blob) => (
                         <Image
-                        key={d}
-                        alt={`${d.replace(/\.[^.]+$/, '').replace(/_/g, ' ')} disco ball`}
-                        src={`/color_story_disco_balls/${d}`}
-                        width={150}
-                        height={150}
-                        className="mx-4"
+                            key={blob.pathname}
+                            alt={`${blob.pathname.replace(/^.*\//, '').replace(/\.[^.]+$/, '').replace(/_/g, ' ')} discoball`}
+                            src={blob.url}
+                            width={150}
+                            height={150}
+                            className="mx-4 h-auto"
                         />
                     ))}
                 </Marquee>
