@@ -25,14 +25,16 @@ export default function Hero() {
                     <h1 className="font-limelight text-[clamp(2rem,10vw,10rem)] whitespace-nowrap [text-shadow:0_0_7px_currentColor,0_0_30px_currentColor] leading-[0.6]">54th and Thread</h1>
 
                     <video
-                        src="/logo-final.webm"
                         playsInline
                         autoPlay
                         muted
                         loop
                         aria-hidden="true"
                         className="relative w-[clamp(2rem,60vw,60rem)] md:w-[clamp(2rem,28vw,28rem)] mx-auto -z-10"
-                    />
+                    >
+                        <source src="/logo.mov" type="video/quicktime" />
+                        <source src="/logo.webm" type="video/webm" />
+                    </video>
                 </div>
             </div>
 
