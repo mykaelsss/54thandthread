@@ -30,6 +30,7 @@ export default function Hero() {
                         muted
                         loop
                         aria-hidden="true"
+                        poster="/logo-poster.webp"
                         className="relative w-[clamp(2rem,60vw,60rem)] md:w-[clamp(2rem,28vw,28rem)] mx-auto -z-10"
                     >
                         <source src="/logo.mov" type="video/quicktime" />
