@@ -1,7 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [videoPlaying, setVideoPlaying] = useState(true);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.play().catch(() => setVideoPlaying(false));
+    }, []);
+
     return (
         <section
             aria-label="Hero"
@@ -24,18 +36,29 @@ export default function Hero() {
                 <div className="relative">
                     <h1 className="font-limelight text-[clamp(2rem,10vw,10rem)] whitespace-nowrap [text-shadow:0_0_7px_currentColor,0_0_30px_currentColor] leading-[0.6]">54th and Thread</h1>
 
-                    <video
-                        playsInline
-                        autoPlay
-                        muted
-                        loop
-                        aria-hidden="true"
-                        poster="/logo-poster.webp"
-                        className="relative w-[clamp(2rem,60vw,60rem)] md:w-[clamp(2rem,28vw,28rem)] mx-auto -z-10"
-                    >
-                        <source src="/logo.mov" type="video/quicktime" />
-                        <source src="/logo.webm" type="video/webm" />
-                    </video>
+                    {videoPlaying ? (
+                        <video
+                            ref={videoRef}
+                            playsInline
+                            muted
+                            loop
+                            aria-hidden="true"
+                            poster="/logo-poster.webp"
+                            className="relative w-[clamp(2rem,60vw,60rem)] md:w-[clamp(2rem,28vw,28rem)] mx-auto -z-10"
+                        >
+                            <source src="/logo.webm" type="video/webm" />
+                            <source src="/logo.mov" type="video/quicktime" />
+                        </video>
+                    ) : (
+                        <Image
+                            src="/logo-poster.webp"
+                            alt=""
+                            aria-hidden="true"
+                            width={800}
+                            height={800}
+                            className="relative w-[clamp(2rem,60vw,60rem)] md:w-[clamp(2rem,28vw,28rem)] mx-auto -z-10"
+                        />
+                    )}
                 </div>
             </div>
 
