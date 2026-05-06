@@ -1,22 +1,22 @@
-import fs from 'fs'
-import path from 'path'
 import Image from "next/image";
+import { list } from '@vercel/blob';
 
-const sustainableGoals = fs.readdirSync(path.join(process.cwd(), 'public/sustainable_goals'))
+export default async function ValuesSection() {
+    const { blobs } = await list({ prefix: 'sustainable_goals/' });
 
-export default function ValuesSection() {
     return (
         <section className="flex flex-col bg-accent-red-dark py-25 items-center gap-10">
-            <p className="text-[clamp(1.5rem,3vw,3rem)]">United Nations Sustainable Development Goals</p>
-            <div className='flex flex-wrap justify-center w-6/8'>
-                {sustainableGoals.map((sg, idx) => (
+            <p className="text-[clamp(1.5rem,3vw,3rem)] text-center">United Nations Sustainable Development Goals</p>
+            <div className='flex flex-wrap justify-center w-6/8 gap-8'>
+                {blobs.map((blob) => (
                     <Image
-                    key={sg}
-                    alt={`UN Sustainable Development Goal ${sg.replace(/\.[^.]+$/, '').replace(/[^0-9]/g, '')}`}
-                    src={`/sustainable_goals/${sg}`}
+                    key={blob.pathname}
+                    alt={`UN Sustainable Development Goal ${blob.pathname.replace(/^.*\//, '').replace(/\.[^.]+$/, '').replace(/_/g, ' ')}`}
+                    src={blob.url}
                     width={250}
                     height={250}
                     loading="lazy"
+                    className="h-auto"
                     />
                 ))}
             </div>

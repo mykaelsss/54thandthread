@@ -5,28 +5,28 @@ const collections = [
     {
         number: "01",
         collectionTitle: 'collab - william storms',
-        img: '/william_storms_carpet.webp',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/collection-10.webp',
         title: 'Woven Tapestry Rug',
         description: 'Alpaca, Recycled Cotton, Linen, Mohair'
     },
     {
         number: "02",
         collectionTitle: 'farm to 54th',
-        img: '/william_storms_carpet.webp',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/collection-10.webp',
         title: 'Abaca Curtain',
         description: 'Braided Abaca and Mohair · Recycled Beads'
     },
     {
         number: "03",
         collectionTitle: 'new york nights',
-        img: '/william_storms_carpet.webp',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/coverlet/coverlet-02.webp',
         title: 'Mohair Coverlet',
         description: 'Violet and Electric Chartreuse · Woven Mohair'
     },
     {
         number: "04",
         collectionTitle: 'statement piece',
-        img: '/william_storms_carpet.webp',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/collection-10.webp',
         title: 'Disco Ball Display',
         description: 'Sustainable Abaca and Jute · Three Sizes · Internal Lights'
     },

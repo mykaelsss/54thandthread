@@ -21,7 +21,7 @@ export default function CollectionCard({
                 <span>{number}</span>
                 <span className="uppercase tracking-[3px] text-[10px] text-text-primary/60">{collectionTitle}</span>
             </div>
-            <div className="relative w-full aspect-4/2 border border-text-primary/15">
+            <div className="relative w-full aspect-3/2 border border-text-primary/15">
                 <Image
                 src={img}
                 alt={title}
