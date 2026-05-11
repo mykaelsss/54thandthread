@@ -4,29 +4,29 @@ import CollectionCard from "./CollectionCard"
 const collections = [
     {
         number: "01",
-        collectionTitle: 'collab - william storms',
-        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/collection-10.webp',
+        collectionTitle: 'Storms & Thread',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/william_storms_rug.webp',
         title: 'Woven Tapestry Rug',
         description: 'Alpaca, Recycled Cotton, Linen, Mohair'
     },
     {
         number: "02",
-        collectionTitle: 'farm to 54th',
-        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/collection-10.webp',
+        collectionTitle: 'Color Rush',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/abaca_curtain_mockup.webp',
         title: 'Abaca Curtain',
         description: 'Braided Abaca and Mohair · Recycled Beads'
     },
     {
         number: "03",
-        collectionTitle: 'new york nights',
+        collectionTitle: 'Color Riot',
         img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/coverlet/coverlet-02.webp',
         title: 'Mohair Coverlet',
         description: 'Violet and Electric Chartreuse · Woven Mohair'
     },
     {
         number: "04",
-        collectionTitle: 'statement piece',
-        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/collection-10.webp',
+        collectionTitle: 'The Harvest Ball',
+        img: 'https://uhabyv1o9x0gnree.public.blob.vercel-storage.com/collection/disco_balls.webp',
         title: 'Disco Ball Display',
         description: 'Sustainable Abaca and Jute · Three Sizes · Internal Lights'
     },

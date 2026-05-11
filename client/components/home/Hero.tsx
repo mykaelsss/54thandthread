@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Section from "../Section";
 
 export default function Hero() {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -15,7 +16,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section
+        <Section
             aria-label="Hero"
             className="relative isolate flex flex-col items-center w-full md:min-h-dvh overflow-hidden"
         >
@@ -34,7 +35,7 @@ export default function Hero() {
                 </div>
 
                 <div className="relative">
-                    <h1 className="font-limelight text-[clamp(2rem,10vw,10rem)] whitespace-nowrap [text-shadow:0_0_7px_currentColor,0_0_30px_currentColor] leading-[0.6]">54th and Thread</h1>
+                    <h1 className="font-limelight text-[clamp(2rem,10vw,10rem)] whitespace-nowrap [text-shadow:0_0_4px_currentColor,0_0_12px_currentColor] leading-[0.6]">54th and Thread</h1>
 
                     {videoPlaying ? (
                         <video
@@ -61,9 +62,6 @@ export default function Hero() {
                     )}
                 </div>
             </div>
-
-            {/* Radial gradient background */}
-            <div aria-hidden="true" className="absolute inset-0 [background:radial-gradient(ellipse_at_center,#3C060E_0%,#0F0305_50%,var(--background-primary)_75%)] z-0" />
 
             {/* Decorative background images — same container so flower centers on design */}
             <div className="absolute top-22 inset-x-0 bottom-0 z-1" aria-hidden="true">
@@ -110,6 +108,6 @@ export default function Hero() {
 
                 <div />
             </div>
-        </section>
+        </Section>
     )
 }

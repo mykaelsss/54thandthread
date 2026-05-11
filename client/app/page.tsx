@@ -1,15 +1,11 @@
 import CollectionSection from "@/components/CollectionSection";
 import ColorStorySection from "@/components/ColorStorySection";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Nav from "@/components/Nav";
+import Hero from "@/components/home/Hero";
 import ValuesSection from "@/components/ValueSection";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="">
-      <Nav />
       <main id="main-content">
         <Hero />
         <section className="bg-accent-red-dark flex flex-col gap-8.5 py-15 md:px-20 px-2 text-lg">
@@ -52,7 +48,5 @@ export default function Home() {
         <ColorStorySection />
         <ValuesSection />
       </main>
-      <Footer />
-    </div>
   );
 }

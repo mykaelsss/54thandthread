@@ -3,17 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const links = [
   { label: "About", href: "/about" },
   { label: "Collections", href: "/collections" },
   { label: "Process", href: "/process" },
   { label: "Farm to 54th", href: "/farm" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header role="banner" className="sticky top-0 z-50 bg-background-primary">
@@ -56,15 +58,17 @@ export default function Nav() {
             <Link
               key={label}
               href={href}
-              className="
-                relative font-eb-garamond text-sm text-text-primary/70
-                cursor-pointer transition-colors duration-200
-                hover:text-text-primary
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:rounded-sm
-                after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-text-primary
-                after:transition-[width] after:duration-300
-                hover:after:w-full
-              "
+              className={cn(`
+              relative font-eb-garamond text-sm text-text-primary/70
+              cursor-pointer transition-colors duration-200
+              hover:text-text-primary
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:rounded-sm
+              after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-text-primary
+              after:transition-[width] after:duration-300
+              hover:after:w-full
+              `, {
+                "[text-shadow:0_0_7px_currentColor,0_0_30px_currentColor]": pathname === href
+              })}
             >
               {label}
             </Link>
@@ -86,7 +90,7 @@ export default function Nav() {
             "
           >
             <span className={`block h-px w-6 bg-text-primary transition-[transform] duration-300 ${open ? "rotate-45 translate-y-1.75" : ""}`} />
-            <span className={`block h-px w-6 bg-text-primary transition-[opacity] duration-300 ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-px w-6 bg-text-primary transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
             <span className={`block h-px w-6 bg-text-primary transition-[transform] duration-300 ${open ? "-rotate-45 -translate-y-1.75" : ""}`} />
           </button>
         </div>
