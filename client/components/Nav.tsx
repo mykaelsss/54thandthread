@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { label: "About", href: "/about" },
-  { label: "Collections", href: "/collections" },
+  { label: "Collection", href: "/collection" },
   { label: "Process", href: "/process" },
   { label: "Farm to 54th", href: "/farm" },
 ];
@@ -37,19 +37,10 @@ export default function Nav() {
         </div>
 
         {/* Brand name — centered */}
-        <div className="flex items-center gap-1.5 self-center">
-          <span
-            className="tracking-[0.2em] text-text-primary uppercase"
-            aria-label="54th and Thread"
-          >
-            54TH
-          </span>
-          <span className="tracking-[0.2em] text-text-primary italic">
-            and
-          </span>
-          <span className="tracking-[0.2em] text-text-primary uppercase">
-            THREAD
-          </span>
+        <div className="flex items-center gap-1.5 self-center" aria-label="54th and Thread">
+          <span className="tracking-[0.2em] text-text-primary uppercase" aria-hidden="true">54TH</span>
+          <span className="tracking-[0.2em] text-text-primary italic" aria-hidden="true">and</span>
+          <span className="tracking-[0.2em] text-text-primary uppercase" aria-hidden="true">THREAD</span>
         </div>
 
         {/* Desktop links */}
@@ -69,6 +60,7 @@ export default function Nav() {
               `, {
                 "[text-shadow:0_0_7px_currentColor,0_0_30px_currentColor]": pathname === href
               })}
+              aria-current={pathname === href ? "page" : undefined}
             >
               {label}
             </Link>

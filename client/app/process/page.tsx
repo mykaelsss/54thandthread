@@ -20,7 +20,7 @@ export default function ProcessPage() {
                 <span className="italic text-[clamp(1rem,1.1vw,1.15rem)]">Handcrafted interior pieces — built to last a lifetime.</span>
                 <div className="space-x-2">
                     <Link 
-                    href={'/collections'}
+                    href={'/collection'}
                     className="text-accent-red bg-text-primary py-2 px-4 uppercase"
                     >
                         Explore Collection

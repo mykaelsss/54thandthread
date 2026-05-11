@@ -25,3 +25,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-eb-garamond);
 }
+
+@theme {
+  --breakpoint-xs: 480px;
+}

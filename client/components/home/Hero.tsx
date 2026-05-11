@@ -83,7 +83,7 @@ export default function Hero() {
                 <nav aria-label="Hero actions">
                     <div className="flex flex-col md:flex-row gap-3">
                         <Link
-                            href="#collections"
+                            href="#collection"
                             className="w-full md:w-34 min-h-11 bg-accent-red uppercase flex items-center justify-center touch-manipulation"
                         >
                             Explore

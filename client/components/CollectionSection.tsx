@@ -1,7 +1,7 @@
 import Link from "next/link"
 import CollectionCard from "./CollectionCard"
 
-const collections = [
+const collection = [
     {
         number: "01",
         collectionTitle: 'Storms & Thread',
@@ -34,14 +34,14 @@ const collections = [
 
 export default function CollectionSection() {
     return (
-        <section id="collections" className="flex flex-col items-center pt-25 pb-8">
+        <section id="collection" className="flex flex-col items-center pt-25 pb-8">
             <div className="flex flex-col items-center gap-2.5">
                 <h2 className="uppercase tracking-[5px] text-sm opacity-80">the collection</h2>
                 <div className="w-20 h-px bg-text-primary opacity-40"></div>
             </div>
             <span className="text-[clamp(1.5rem,7vw,5rem)]">Handmade for your home stage.</span>
             <div className="grid md:grid-cols-2 gap-5 pt-15 px-2 w-full max-w-340">
-                {collections.map(c => (
+                {collection.map(c => (
                     <CollectionCard 
                     key={c.number}
                     number={c.number}
@@ -52,7 +52,7 @@ export default function CollectionSection() {
                     />
                 ))}
             </div>
-            <Link href={'/collections'} className="pt-3">View the full collection <span aria-hidden="true">→</span></Link>
+            <Link href={'/collection'} className="pt-3">View the full collection <span aria-hidden="true">→</span></Link>
         </section>
     )
 }
