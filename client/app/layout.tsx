@@ -4,6 +4,7 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const limelight = Limelight({
   weight: '400',
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
